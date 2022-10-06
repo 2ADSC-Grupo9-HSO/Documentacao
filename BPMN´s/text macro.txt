@@ -1,0 +1,75 @@
+REDE CONTRATOU HSO
+
+CADASTRAR REDES DE HOSPITAIS
+
+------------------------------------
+REDES CONFIGURAR ACESSOS
+
+rede: Logar
+
+rede Cadastrar filiais
+
+Filial: Logar
+
+filial cadatrar suporte
+
+suporte fazer login
+
+suporte cadastrar maquinas
+
+Suporte instalar aplicação
+
+suporte Logar a maquina - fim
+------------------------------------
+
+maquina ligada?
+
+sim - capturar dados
+
+nao - fim
+-------------------------------------
+CAPTURAR DADOS
+
+aplicação capturar dados de maquina
+
+Aplicação tratar os dados da maquina
+
+Aplicação enviar dados para nuvem
+
+aplicação armazenar dados em nuvem
+-------------------------------------
+
+VERIFICAR DADOS DA MAQUINA
+
+DADOS FORA DO PADRÃO?
+
+se não: verificar dados daquina
+
+sim - RESOLVER PROBLEMA
+ 
+------------------------------------
+RESOLVER PROBLEMA
+
+Resolver Automaticamente 
+
+resolveu?
+
+sim - verificar dados daquina
+
+nao 
+
+Slack notificar suporte
+
+suporte 
+
+suporte Resolver remotamente - fim
+
+----------------------------------
+
+
+
+
+
+
+
+
