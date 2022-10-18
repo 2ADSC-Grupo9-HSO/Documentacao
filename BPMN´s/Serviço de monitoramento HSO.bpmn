@@ -88,28 +88,6 @@
         <omgdc:Bounds x="210" y="110" width="910" height="140" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Gateway_1us59vo_di" bpmnElement="Gateway_1us59vo" isMarkerVisible="true">
-        <omgdc:Bounds x="475" y="455" width="50" height="50" />
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="446" y="514" width="81" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_0272wcp_di" bpmnElement="Activity_0272wcp">
-        <omgdc:Bounds x="250" y="290" width="100" height="80" />
-        <bpmndi:BPMNLabel />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_0m441f2_di" bpmnElement="Event_0m441f2">
-        <omgdc:Bounds x="282" y="152" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="261" y="124" width="78" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1gahw4m_di" bpmnElement="Event_1gahw4m">
-        <omgdc:Bounds x="332" y="462" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="308" y="505" width="87" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0t3hkt0_di" bpmnElement="Activity_0t3hkt0">
         <omgdc:Bounds x="1000" y="440" width="100" height="80" />
         <bpmndi:BPMNLabel />
@@ -128,9 +106,31 @@
         <omgdc:Bounds x="610" y="440" width="100" height="80" />
         <bpmndi:BPMNLabel />
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_1us59vo_di" bpmnElement="Gateway_1us59vo" isMarkerVisible="true">
+        <omgdc:Bounds x="475" y="455" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="446" y="514" width="81" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0272wcp_di" bpmnElement="Activity_0272wcp">
+        <omgdc:Bounds x="250" y="290" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_0m441f2_di" bpmnElement="Event_0m441f2">
+        <omgdc:Bounds x="282" y="152" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="261" y="124" width="78" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0aqddby_di" bpmnElement="Activity_0aqddby">
         <omgdc:Bounds x="350" y="150" width="100" height="80" />
         <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1gahw4m_di" bpmnElement="Event_1gahw4m">
+        <omgdc:Bounds x="332" y="462" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="308" y="505" width="87" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="Flow_0xcc3fi_di" bpmnElement="Flow_0xcc3fi">
         <omgdi:waypoint x="300" y="188" />
