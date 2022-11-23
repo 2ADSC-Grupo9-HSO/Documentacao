@@ -25,8 +25,8 @@ if [ $? -eq 0 ]
 			sudo systemctl enable docker
 			sudo docker pull mysql:8.0.3
 
-            docker build -t image_hso .
-            docker run image_hso
+            docker build -t image_mysql_hso .
+            docker run image_mysql_hso
 			
 			sleep 2
 

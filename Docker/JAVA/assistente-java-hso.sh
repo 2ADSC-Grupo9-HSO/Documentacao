@@ -53,6 +53,10 @@ sleep 2
 
 git clone https://github.com/2ADSC-Grupo9-HSO/jar-para-vm.git
 
+docker build -t image_java_hso .
+
 echo "Aplicação instalada!"
+
+docker run image_java_hso
  
 sleep 2
