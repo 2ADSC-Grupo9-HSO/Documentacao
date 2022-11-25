@@ -1,3 +1,4 @@
+CREATE DATABASE hso;
 USE hso;
 
 CREATE TABLE tbRedeHospitalar(
@@ -63,30 +64,14 @@ CREATE TABLE tbHistorico(
     valorRegistro DECIMAL(5,2), 
     momentoRegistro DATETIME DEFAULT CURRENT_TIMESTAMP);
 
-INSERT INTO tbComponente
+INSERT INTO tbRedeHospitalar
 VALUES
-(NULL, 'Processador'),
-(NULL, 'Memória RAM'),
-(NULL, 'Disco');
+(NULL, 'Plena', 'plena.adm@gmail.com', 'plena123');
 
 INSERT INTO tbFilialHospital
 VALUES
 (NULL, 1, 8765349, 45, 'Bloco 5', 12345678901234, 12345, 'plena.itaquera@gmail.com'),
 (NULL, 1, 8765349, 45, 'Bloco 5', 12345678901234, 12345, 'plena.itaquera@gmail.com');
-
-INSERT INTO tbHardware
-VALUES 
-(NULL, 2, 1),
-(NULL, 2, 2),
-(NULL, 2, 3);
-
-INSERT INTO tbMaquina
-VALUES
-(2, 1, 'pc1', 'Dell', 'Linux', 9, 123);
-
-INSERT INTO tbRedeHospitalar
-VALUES
-(NULL, 'Plena', 'plena.adm@gmail.com', 'plena123');
 
 INSERT INTO tbTelefoneHospital
 VALUES
@@ -98,3 +83,19 @@ INSERT INTO tbUsuario
 VALUES
 (NULL, 1, 'gerson.santos', 'Suporte', 'gersons.plena@gmail.com', 12345678901, 'gerson123'),
 (NULL, 1, 'fernanda.caramico', 'Suporte', 'fernandac.plena@gmail.com', 12345678901, 'fefe123');
+
+INSERT INTO tbMaquina
+VALUES
+(2, 1, 'pc1', 'Dell', 'Linux', 9, 123);
+
+INSERT INTO tbComponente
+VALUES
+(NULL, 'Processador'),
+(NULL, 'Memória RAM'),
+(NULL, 'Disco');
+
+INSERT INTO tbHardware
+VALUES 
+(NULL, 2, 1),
+(NULL, 2, 2),
+(NULL, 2, 3);
