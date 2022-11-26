@@ -12,6 +12,17 @@ if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Você já tem o Docker instalado!"
 		sleep 2
+
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Instalando banco de dados..."
+
+		sudo systemctl start docker
+		sudo systemctl enable docker
+		sudo docker pull mysql:8.0.3
+
+		sudo docker build -t image_mysql_hso .
+    	sudo docker run image_mysql_hso
+
+		sleep 2
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você realmente deseja instalar o Docker? (Y/n)"		
 	read resp

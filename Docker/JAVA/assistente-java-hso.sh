@@ -12,6 +12,27 @@ if [ $? -eq 0 ]
 	then
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Você já tem o Java instalado!"
 		sleep 2
+
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Instalando aplicação Java..."
+
+		sleep 2
+
+		git clone https://github.com/2ADSC-Grupo9-HSO/Aplicacao-Java.git
+
+		sleep 2
+
+		git clone https://github.com/2ADSC-Grupo9-HSO/jar-para-vm.git
+
+		echo "Aplicação instalada!"
+
+		sudo docker build -t image_java_hso .
+		sudo docker run image_java_hso
+
+		cd jar-para-vm/
+		sudo chmod 777 login-1.0-jar-with-dependencies.jar
+		java -jar login-1.0-jar-with-dependencies.jar
+		
+		sleep 2
 	else
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você realmente deseja instalar o Java? (Y/n)"		
 	read inst
@@ -42,21 +63,3 @@ if [ $? -eq 0 ]
 		sleep 1
 	fi
 fi
-
-echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Instalando aplicação Java..."
-
-sleep 2
-
-git clone https://github.com/2ADSC-Grupo9-HSO/Aplicacao-Java.git
-
-sleep 2
-
-git clone https://github.com/2ADSC-Grupo9-HSO/jar-para-vm.git
-
-sudo docker build -t image_java_hso .
-
-echo "Aplicação instalada!"
-
-sudo docker run image_java_hso
- 
-sleep 2
