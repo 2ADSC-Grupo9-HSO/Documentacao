@@ -1,5 +1,5 @@
 FROM openjdk:11-jre-slim
 
-COPY /jar-para-vm/login-1.0-jar-with-dependencies.jar /usr/demo.jar
+COPY login.jar /home/ubuntu/dockerfile/JAVA/jar-para-vm/login.jar
 
-ENTRYPOINT ["java","-jar","/usr/demo.jar"]
+CMD ["java","-jar","/home/ubuntu/dockerfile/JAVA/jar-para-vm/login.jar"]
