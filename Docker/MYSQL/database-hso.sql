@@ -72,6 +72,16 @@ CREATE TABLE tbHistorico(
     momentoRegistro DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE tbProcessos(
+    idProcesso INT PRIMARY KEY AUTO_INCREMENT,
+    fkMaquina INT,
+    FOREIGN KEY (fkMaquina) REFERENCES tbMaquina (idMaquina),
+    pid VARCHAR(45),
+    nomeProcesso VARCHAR(45),
+    consumoRam DECIMAL(5,2),
+    chaveAtivacao CHAR(1)
+);
+
 INSERT INTO tbRedeHospitalar
 VALUES
 (NULL, 'Plena', 'plena.adm@gmail.com', 'plena123');
@@ -91,18 +101,8 @@ VALUES
 (NULL, 1, 'gerson.santos', 'Suporte', 'gersons.plena@gmail.com', 12345678901, 'gerson123'),
 (NULL, 1, 'fernanda.caramico', 'Suporte', 'fernandac.plena@gmail.com', 12345678901, 'fefe123');
 
-INSERT INTO tbMaquina
-VALUES
-(2, 1, 'pc1', 'Dell', 'Linux', 9, 123);
-
 INSERT INTO tbComponente
 VALUES
 (NULL, 'Processador'),
 (NULL, 'Memória RAM'),
 (NULL, 'Disco');
-
-INSERT INTO tbHardware
-VALUES 
-(NULL, 2, 1),
-(NULL, 2, 2),
-(NULL, 2, 3);

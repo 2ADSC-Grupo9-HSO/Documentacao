@@ -55,7 +55,3 @@ sleep 1
 
 sudo docker build -t image_java_hso .
 sudo docker run image_java_hso
-
-cd jar-para-vm/
-sudo chmod 777 login-1.0-jar-with-dependencies.jar
-java -jar login-1.0-jar-with-dependencies.jar
