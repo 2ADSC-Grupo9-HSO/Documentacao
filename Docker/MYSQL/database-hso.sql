@@ -5,7 +5,8 @@ CREATE TABLE tbRedeHospitalar(
     idRede INT PRIMARY KEY AUTO_INCREMENT, 
     nomeRede VARCHAR(45), 
     emailRede VARCHAR(45), 
-    senhaRede VARCHAR(45));
+    senhaRede VARCHAR(45)
+);
 
 CREATE TABLE tbFilialHospital(
     idFilial INT PRIMARY KEY AUTO_INCREMENT, 
@@ -16,7 +17,8 @@ CREATE TABLE tbFilialHospital(
     complementoEnd VARCHAR(45), 
     cnpjFilial CHAR(14), 
     senhaFilial VARCHAR(45), 
-    emailFilial VARCHAR(45));
+    emailFilial VARCHAR(45)
+);
     
 CREATE TABLE tbTelefoneHospital(
     idTelefone INT PRIMARY KEY AUTO_INCREMENT, 
@@ -24,7 +26,8 @@ CREATE TABLE tbTelefoneHospital(
     FOREIGN KEY (fkFilial) REFERENCES tbFilialHospital (idFilial), 
     numeroTelefone VARCHAR(45), 
     tipoNum VARCHAR(9), 
-    CHECK (tipoNum = 'Fixo' OR tipoNum = 'Celular' OR tipoNum = 'Whatsapp' OR tipoNum = 'Comercial'));
+    CHECK (tipoNum = 'Fixo' OR tipoNum = 'Celular' OR tipoNum = 'Whatsapp' OR tipoNum = 'Comercial')
+);
 
 CREATE TABLE tbUsuario(
     idUsuario INT PRIMARY KEY AUTO_INCREMENT, 
@@ -34,7 +37,8 @@ CREATE TABLE tbUsuario(
     cargo VARCHAR(45), 
     email VARCHAR(45), 
     cpf CHAR(11), 
-    senha VARCHAR(45));
+    senha VARCHAR(45)
+);
 
 CREATE TABLE tbMaquina(
     idMaquina INT PRIMARY KEY AUTO_INCREMENT, 
@@ -44,25 +48,29 @@ CREATE TABLE tbMaquina(
     marcaMaquina VARCHAR(45), 
     sistemaOperacional VARCHAR(45), 
     andarMaquina INT, 
-    senhaMaquina VARCHAR(45));
+    senhaMaquina VARCHAR(45)
+);
 
 CREATE TABLE tbComponente(
     idComponente INT PRIMARY KEY AUTO_INCREMENT, 
-    nomeComponente VARCHAR(45));
+    nomeComponente VARCHAR(45)
+);
 
 CREATE TABLE tbHardware(
     idHardware INT PRIMARY KEY AUTO_INCREMENT, 
     fkMaquina INT, 
     FOREIGN KEY (fkMaquina) REFERENCES tbMaquina (idMaquina), 
     fkComponente INT, 
-    FOREIGN KEY (fkComponente) REFERENCES tbComponente (idComponente));
+    FOREIGN KEY (fkComponente) REFERENCES tbComponente (idComponente)
+);
 
 CREATE TABLE tbHistorico(
     idHistorico INT PRIMARY KEY AUTO_INCREMENT, 
     fkHardware INT, 
     FOREIGN KEY (fkHardware) REFERENCES tbHardware (idHardware), 
     valorRegistro DECIMAL(5,2), 
-    momentoRegistro DATETIME DEFAULT CURRENT_TIMESTAMP);
+    momentoRegistro DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 
 INSERT INTO tbRedeHospitalar
 VALUES
@@ -70,7 +78,6 @@ VALUES
 
 INSERT INTO tbFilialHospital
 VALUES
-(NULL, 1, 8765349, 45, 'Bloco 5', 12345678901234, 12345, 'plena.itaquera@gmail.com'),
 (NULL, 1, 8765349, 45, 'Bloco 5', 12345678901234, 12345, 'plena.itaquera@gmail.com');
 
 INSERT INTO tbTelefoneHospital

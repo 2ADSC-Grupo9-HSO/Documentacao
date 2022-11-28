@@ -14,6 +14,7 @@ if [ $? -eq 0 ]
 		sleep 2
 
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Instalando banco de dados..."
+		sleep 2
 
 		sudo systemctl start docker
 		sudo systemctl enable docker
@@ -21,14 +22,14 @@ if [ $? -eq 0 ]
 
 		sudo docker build -t image_mysql_hso .
     	sudo docker run image_mysql_hso
-
-		sleep 2
 	else
-		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você realmente deseja instalar o Docker? (Y/n)"		
+		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você realmente deseja instalar o Docker? (Y/n)"
+		sleep 2		
 	read resp
 	if [ \"$resp\" == \"Y\" ]
 		then
 			echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Instalando Docker e banco de dados..."
+			sleep 2
 
 			sudo apt update -y
 			sudo apt install docker.io -y
@@ -38,10 +39,9 @@ if [ $? -eq 0 ]
 
             sudo docker build -t image_mysql_hso .
             sudo docker run image_mysql_hso
-			
-			sleep 2
 
 			echo "Instalação do Docker e criação das tabelas de banco de dados concluídas!"
+			sleep 1
 		else 	
 		echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7)  Você optou por não instalar o Docker por enquanto, até a próxima!"
 		sleep 1
