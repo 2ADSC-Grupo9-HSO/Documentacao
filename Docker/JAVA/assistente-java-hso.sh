@@ -47,7 +47,6 @@ fi
 echo "$(tput setaf 10)[Bot assistant]:$(tput setaf 7) Instalando aplicação Java..."
 sleep 2
 
-git clone https://github.com/2ADSC-Grupo9-HSO/Aplicacao-Java.git
 git clone https://github.com/2ADSC-Grupo9-HSO/jar-para-vm.git
 
 echo "Aplicação instalada!"
